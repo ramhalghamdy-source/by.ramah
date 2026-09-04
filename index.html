@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="by.ramah — UI/UX, product and visual design portfolio featuring interactive healthcare and luxury e-commerce concepts.">
+<meta name="theme-color" content="#7b263b">
+<meta property="og:title" content="by.ramah — UI/UX & <span data-i18n="k65">تصميم المنتجات</span>er">
+<meta property="og:description" content="Thoughtful digital products, interactive prototypes and refined visual experiences.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/brand-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<title>by.ramah — UI/UX & <span data-i18n="k65">تصميم المنتجات</span>er</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap');
+:root{
+  --bg:#f7f5f1;--paper:#fffefa;--ink:#171514;--muted:#6e6964;--line:rgba(23,21,20,.12);
+  --wine:#7b263b;--wine2:#9e5467;--blue:#4f8fd8;--mint:#77d7c0;--cream:#e9dfd2;
+  --shadow:0 28px 80px rgba(31,25,22,.08);--max:1360px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.wrap{width:min(calc(100% - 48px),var(--max));margin:auto}
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(247,245,241,.84);backdrop-filter:blur(18px);
+  border-bottom:1px solid transparent;transition:.25s
+}
+.nav.scrolled{border-color:var(--line)}
+.nav-in{height:80px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.brand{font-family:"Libre Caslon Display",Georgia,serif;font-size:1.5rem;letter-spacing:-.02em}
+.brand i{color:var(--wine);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:.87rem}
+.nav-links a{opacity:.72}
+.nav-links a:hover{opacity:1}
+.nav-links .cta{opacity:1;border:1px solid var(--ink);border-radius:999px;padding:10px 15px}
+.mobile-menu{display:none;border:0;background:none;font:inherit;font-weight:600}
+.hero{min-height:100vh;padding:145px 0 62px;display:grid;align-items:end}
+.hero-top{display:grid;grid-template-columns:1.4fr .6fr;gap:60px;align-items:end}
+.eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);font-weight:700;margin-bottom:22px}
+h1,h2,h3,p{margin-top:0}
+h1{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:clamp(4.5rem,10vw,9.4rem);line-height:.86;letter-spacing:-.055em;margin-bottom:0}
+h1 em,h2 em{font-style:italic;color:var(--wine)}
+.hero-note{max-width:440px;color:var(--muted);font-size:1.05rem;line-height:1.7}
+.hero-meta{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:25px;color:var(--muted);font-size:.84rem}
+.hero-meta strong{color:var(--ink);font-weight:600}
+section{padding:100px 0}
+.section-head{display:flex;justify-content:space-between;gap:34px;align-items:end;margin-bottom:42px}
+.kicker{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--wine);font-weight:700}
+h2{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:clamp(3rem,6vw,6.5rem);line-height:.9;letter-spacing:-.045em;margin:8px 0 0}
+.section-copy{max-width:480px;color:var(--muted);line-height:1.7}
+.project{border-top:1px solid var(--line);padding:24px 0 72px}
+.project-head{display:grid;grid-template-columns:.14fr .65fr .21fr;gap:24px;align-items:start;margin-bottom:24px}
+.num{color:var(--wine);font-size:.78rem;font-weight:700}
+.project-title{font-family:"Libre Caslon Display",Georgia,serif;font-size:clamp(2.7rem,5vw,5.4rem);line-height:.92}
+.project-meta{text-align:right;color:var(--muted);font-size:.84rem;line-height:1.65}
+.preview{display:grid;grid-template-columns:.32fr .68fr;min-height:630px;border-radius:32px;overflow:hidden;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)}
+.preview-copy{padding:46px;display:flex;flex-direction:column;justify-content:space-between}
+.preview-copy p{color:var(--muted);line-height:1.75}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.tag{border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:.72rem;color:var(--muted)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--ink);padding:13px 16px;border-radius:999px;font-size:.82rem;font-weight:650;transition:.2s}
+.btn.dark{background:var(--ink);color:white}
+.btn:hover{transform:translateY(-2px)}
+.device-stage{position:relative;overflow:hidden;display:grid;place-items:center;padding:46px}
+.clario-stage{background:
+radial-gradient(circle at 20% 10%,rgba(255,255,255,.85),transparent 24%),
+linear-gradient(145deg,#edf7ff 0%,#e3f8f1 58%,#d6ecfa 100%)}
+.atelier-stage{background:
+radial-gradient(circle at 80% 14%,rgba(255,255,255,.72),transparent 22%),
+linear-gradient(145deg,#eee4d5,#d6c0a7 60%,#bca181)}
+.phone-row{display:flex;gap:18px;align-items:end;transform:rotate(-2deg)}
+.phone{width:175px;background:#111;border-radius:35px;padding:7px;box-shadow:0 26px 55px rgba(30,56,74,.2)}
+.phone-screen{height:350px;background:white;border-radius:29px;padding:13px;position:relative;overflow:hidden}
+.phone-screen:before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:54px;height:13px;border-radius:99px;background:#111}
+.p-status{margin-top:16px;font-size:.58rem;font-weight:700;display:flex;justify-content:space-between}
+.p-hero{margin-top:18px}
+.p-hero small{color:#6c8292}.p-hero strong{display:block;font-size:1.05rem;line-height:1.05;margin-top:4px}
+.p-card{margin-top:11px;background:#f4f8fb;border:1px solid #edf1f4;border-radius:11px;padding:9px;font-size:.58rem}
+.p-blue{height:34px;margin-top:10px;border-radius:9px;background:linear-gradient(135deg,#5a98dd,#73b0eb)}
+.p-metrics{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.p-metrics i{height:52px;background:#f5f8fa;border-radius:9px;border:1px solid #eef2f4}
+.p-lines{display:grid;gap:7px;margin-top:12px}
+.p-lines i{height:8px;border-radius:99px;background:#edf2f5}
+.p-lines i:nth-child(2){width:72%}.p-lines i:nth-child(3){width:86%}
+.browser{width:min(700px,100%);border-radius:19px;background:#1e1c1a;padding:8px 8px 14px;box-shadow:0 30px 70px rgba(37,29,22,.24)}
+.browser-top{height:27px;background:#f5f3ee;border-radius:12px 12px 0 0;display:flex;gap:5px;align-items:center;padding:0 10px}
+.browser-top i{width:6px;height:6px;border-radius:50%;background:#c7b9a8}
+.browser-body{min-height:390px;background:#f5efe5;display:grid;grid-template-columns:1fr 1.07fr;overflow:hidden}
+.fashion-copy{padding:40px 28px;display:flex;flex-direction:column;justify-content:center}
+.fashion-copy small{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:#9b7c54}
+.fashion-copy b{font-family:"Libre Caslon Display",Georgia,serif;font-size:2.6rem;line-height:.87;font-weight:400;margin:10px 0}
+.fashion-copy span{font-size:.62rem;color:#756c63;line-height:1.55}
+.fashion-visual{background:
+radial-gradient(ellipse at 50% 20%,rgba(255,255,255,.82),transparent 17%),
+linear-gradient(150deg,#ddc8ad,#b99d7c);position:relative}
+.silhouette{position:absolute;left:50%;top:50%;transform:translate(-50%,-45%);width:155px;height:270px}
+.head{position:absolute;width:46px;height:54px;border-radius:50%;left:54px;top:0;background:#7a4e35}
+.body{position:absolute;left:22px;top:44px;width:112px;height:210px;background:linear-gradient(160deg,#f5ead8,#d9c5a7);clip-path:polygon(38% 0,65% 0,100% 100%,0 100%)}
+.product-view{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;padding:20px;background:#fffdfa}
+.product-img{background:linear-gradient(145deg,#eadccc,#d4baa0);position:relative;min-height:350px}
+.product-info-demo{padding:18px 12px}
+.product-info-demo small{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:#9b7c54}
+.product-info-demo h4{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:1.7rem;margin:9px 0}
+.option-row{display:flex;gap:6px;margin:10px 0}.option-row i{width:23px;height:23px;border-radius:50%;background:#e8ddcd;border:1px solid #d0c2b2}.option-row i:nth-child(2){background:#27221e}.option-row i:nth-child(3){background:#ae9678}
+.size-row{display:flex;gap:5px;margin:11px 0}.size-row i{width:28px;height:24px;border:1px solid #d9d0c6}
+.fake-add{height:34px;background:#181613;margin-top:17px}
+.case-study{margin-top:38px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.case-block{padding:20px;border-top:1px solid var(--line)}
+.case-block small{display:block;color:var(--wine);text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;margin-bottom:9px}
+.case-block strong{display:block;font-size:.95rem;margin-bottom:7px}
+.case-block p{color:var(--muted);font-size:.84rem;line-height:1.6;margin-bottom:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}
+.about-big{font-family:"Libre Caslon Display",Georgia,serif;font-size:clamp(3.5rem,7vw,7.2rem);line-height:.88;letter-spacing:-.045em}
+.about-big em{color:var(--wine)}
+.about-copy{font-size:1.12rem;line-height:1.8;color:#373331}
+.about-copy strong{color:var(--ink)}
+.capabilities{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cap{border-top:1px solid var(--line);padding:13px 0}.cap small{display:block;color:var(--muted);margin-bottom:4px}
+.contact-card{background:var(--wine);color:#fff;border-radius:34px;padding:62px;display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:end}
+.contact-card h2{color:white;margin:0}.contact-card h2 em{color:#e8c4cd}
+.contact-card p{color:#e6cfd5;line-height:1.75}
+.contact-card .btn{border-color:white;color:white}
+footer{padding:34px 0 46px;color:var(--muted);font-size:.8rem}
+.foot{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:25px}
+.reveal{opacity:0;transform:translateY(24px);transition:.75s ease}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:1000px){
+ .hero-top,.preview,.about-grid,.contact-card{grid-template-columns:1fr}
+ .project-head{grid-template-columns:.12fr 1fr}.project-meta{grid-column:2;text-align:left}
+ .case-study{grid-template-columns:1fr 1fr}
+ .device-stage{min-height:540px}
+}
+@media(max-width:760px){
+ .wrap{width:min(calc(100% - 28px),var(--max))}
+ .nav-links{display:none}.mobile-menu{display:block}
+ .hero{min-height:auto;padding-top:150px}
+ h1{font-size:4.2rem}.hero-meta{display:grid}
+ .project{padding-bottom:56px}.preview-copy{padding:28px}.device-stage{padding:26px;min-height:470px}
+ .phone-row{gap:8px;transform:scale(.72) rotate(-2deg);width:700px}
+ .browser{transform:scale(.92)}
+ .case-study{grid-template-columns:1fr}
+ .contact-card{padding:36px 25px}
+ .foot{display:grid}
+}
+
+/* Brand polish */
+:focus-visible{outline:3px solid rgba(123,38,59,.28);outline-offset:4px;border-radius:8px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:"Libre Caslon Display",Georgia,serif}
+.brand-mark{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 5px 10px rgba(123,38,59,.12))}
+.hero-side{display:grid;gap:22px;justify-items:start}
+.hero-brand-card{
+  width:min(340px,100%);padding:20px 22px;border:1px solid rgba(123,38,59,.12);border-radius:24px;
+  background:linear-gradient(145deg,rgba(255,244,247,.82),rgba(255,255,255,.46));box-shadow:0 18px 45px rgba(123,38,59,.06)
+}
+.hero-lockup{width:min(265px,100%);height:auto;display:block;margin:auto}
+.brand-strip{
+  margin-top:28px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center
+}
+.brand-strip img{width:86px;height:86px;object-fit:contain}
+.brand-strip p{margin:0;color:var(--muted);line-height:1.65;max-width:700px}
+.brand-strip strong{color:var(--ink)}
+.demo-note{font-size:.72rem;color:var(--muted);margin-top:12px;line-height:1.55}
+.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.copy-btn{background:transparent;color:white}
+.copy-btn:hover{background:white;color:var(--wine)}
+.mobile-panel{
+  position:fixed;inset:80px 14px auto 14px;z-index:59;background:rgba(255,254,250,.98);backdrop-filter:blur(18px);
+  border:1px solid var(--line);box-shadow:var(--shadow);border-radius:24px;padding:15px;display:none
+}
+.mobile-panel.open{display:grid;animation:menuIn .2s ease}
+.mobile-panel a{padding:15px;border-radius:14px;font-weight:600}
+.mobile-panel a:hover{background:#f4efeb}
+@keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.copy-toast{
+  position:fixed;left:50%;bottom:24px;z-index:100;transform:translate(-50%,14px);opacity:0;pointer-events:none;
+  background:#171514;color:white;padding:12px 16px;border-radius:999px;font-size:.78rem;box-shadow:0 12px 35px rgba(0,0,0,.18);transition:.22s
+}
+.copy-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1000px){
+  .hero-side{justify-items:start}
+  .hero-brand-card{max-width:420px}
+}
+@media(max-width:760px){
+  .brand-mark{width:34px;height:34px}
+  .brand-strip{grid-template-columns:1fr;gap:12px}
+  .brand-strip img{width:72px;height:72px}
+  .mobile-menu{padding:9px 0}
+}
+
+
+.lang-switch{
+  border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:999px;
+  padding:9px 12px;font-weight:700;font-size:.78rem;cursor:pointer;min-width:48px
+}
+.lang-switch:hover{background:white}
+html[dir="rtl"] body{font-family:"Noto Kufi Arabic","Segoe UI",Tahoma,sans-serif}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] .project-title,html[dir="rtl"] .about-big,
+html[dir="rtl"] .brand{font-family:"Noto Kufi Arabic","Segoe UI",Tahoma,sans-serif;letter-spacing:-.03em}
+html[dir="rtl"] .hero-top,
+html[dir="rtl"] .preview,
+html[dir="rtl"] .about-grid,
+html[dir="rtl"] .contact-card,
+html[dir="rtl"] .project-head{direction:rtl}
+html[dir="rtl"] .project-meta{text-align:left}
+html[dir="rtl"] .section-head{direction:rtl}
+html[dir="rtl"] .nav-in{direction:rtl}
+html[dir="rtl"] .nav-links{direction:rtl}
+html[dir="rtl"] .hero-meta{direction:rtl}
+html[dir="rtl"] .brand-strip{direction:rtl}
+html[dir="rtl"] .actions{direction:rtl}
+html[dir="rtl"] .tags{direction:rtl}
+html[dir="rtl"] .case-study{direction:rtl}
+html[dir="rtl"] .capabilities{direction:rtl}
+html[dir="rtl"] .foot{direction:rtl}
+html[dir="rtl"] .hero-side{align-items:flex-start}
+html[dir="rtl"] .hero-note,
+html[dir="rtl"] .section-copy,
+html[dir="rtl"] .preview-copy p,
+html[dir="rtl"] .case-block p,
+html[dir="rtl"] .about-copy,
+html[dir="rtl"] .contact-card p,
+html[dir="rtl"] .brand-strip p{line-height:1.9}
+@media(max-width:760px){
+  .lang-switch{padding:8px 10px}
+}
+
+
+.contact-actions a,.contact-actions button{min-width:140px}
+.contact-actions .copy-btn{border-color:rgba(255,255,255,.76)}
+.contact-card a:hover,.contact-card button:hover{background:#fff;color:var(--wine)}
+footer a{text-decoration:underline;text-underline-offset:3px}
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"by.ramah",
+  "url":"",
+  "email":"mailto:BY.RAMAH3@GMAIL.COM",
+  "sameAs":["https://www.instagram.com/by.ramah3/"],
+  "jobTitle":"UI/UX & Product Designer"
+}
+</script>
+
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="by.ramah home"><img class="brand-mark" src="assets/byramah-mark.png" alt=""><span>by.ramah<i>.</i></span></a>
+    <nav class="nav-links">
+      <a href="#work"><span data-i18n="k74">الأعمال</span></a>
+      <a href="#about"><span data-i18n="k60">نبذة</span></a>
+      <a href="#contact"><span data-i18n="k75">التواصل</span></a>
+      <a class="cta" href="#work" data-i18n="nav_projects"><span data-i18n="k76">عرض المشاريع ↘</span></a>
+      <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch language">EN</button>
+    </nav>
+    <button class="mobile-menu" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+  </div>
+</header>
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#work"><span data-i18n="k74">الأعمال</span></a>
+  <a href="#about"><span data-i18n="k60">نبذة</span></a>
+  <a href="#contact"><span data-i18n="k75">التواصل</span></a>
+  <a href="clario/index.html" target="_blank" rel="noopener">Clario Care ↗</a>
+  <a href="atelier-noura/index.html" target="_blank" rel="noopener">Atelier Noura ↗</a>
+  <button class="lang-switch" id="mobileLangSwitch" type="button">EN</button>
+</div>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <div class="eyebrow reveal"><span data-i18n="k1">تصميم واجهات وتجربة مستخدم · تصميم منتجات · تصميم بصري</span></div>
+          <h1 class="reveal"><span data-i18n-html="k2">تجارب رقمية<br>تجمع بين <em>الوضوح والهوية.</em></span></h1>
+        </div>
+        <div class="hero-side reveal">
+          <div class="hero-brand-card"><img class="hero-lockup" src="assets/byramah-logo-full.png" alt="by.ramah — Graphic Design and <span data-i18n="k64">تصميم UI/UX</span>"></div>
+          <p class="hero-note"><span data-i18n="k3">أصمم منتجات وتجارب رقمية مدروسة تحوّل الأفكار المعقدة إلى واجهات واضحة، أنيقة، وسهلة التذكر.</span></p>
+        </div>
+      </div>
+      <div class="hero-meta reveal">
+        <div><strong><span data-i18n="k4">الموقع</span></strong><br><span data-i18n="k5">جدة، المملكة العربية السعودية</span></div>
+        <div><strong><span data-i18n="k6">أعمال مختارة</span></strong><br><span data-i18n="k7">مشاريع مفاهيمية تفاعلية</span></div>
+        <div><strong><span data-i18n="k8">التخصص</span></strong><br><span data-i18n="k9">UI/UX · Product · Brand</span></div>
+        <div><strong><span data-i18n="k10">ملف أعمال 2026</span></strong><br><span data-i18n="k11">أعمال تصميم مستقلة</span></div>
+      </div>
+      <div class="brand-strip reveal">
+        <img src="assets/byramah-mark.png" alt="">
+        <p><span data-contact-copy-ar>متاحة لمشاريع مختارة، تعاونات، وأعمال تصميم منتجات رقمية. للتواصل يمكنك مراسلتي عبر البريد أو Instagram.</span><span data-contact-copy-en style="display:none">Available for selected freelance projects, collaborations and digital product work. You can reach me by email or Instagram.</span></p>
+          <div class="contact-actions">
+            <a class="btn copy-btn" href="mailto:BY.RAMAH3@GMAIL.COM">Email ↗</a>
+            <a class="btn copy-btn" href="https://www.instagram.com/by.ramah3/" target="_blank" rel="noopener">Instagram ↗</a>
+            <button class="btn copy-btn" type="button" onclick="copyEmail()">Copy email</button>
+            <a class="btn" href="#top"><span data-i18n="k64">العودة للأعلى ↑</span></a>
+          </div>
+          <div class="demo-note" style="color:#efdfe4;margin-top:14px">
+            <span dir="ltr">BY.RAMAH3@GMAIL.COM · @by.ramah33</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span><span data-i18n="k72">© 2026 by.ramah · ملف أعمال مستقل</span></span>
+    <span><span data-i18n="k73">صُمم وطُوّر كتجربة Portfolio تفاعلية</span></span>
+  </div>
+</footer>
+<div class="copy-toast" id="copyToast">تم نسخ البريد</div>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>10));
+
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+
+const mobileBtn=document.getElementById('mobileMenuBtn');
+const mobilePanel=document.getElementById('mobilePanel');
+mobileBtn.addEventListener('click',()=>{
+  const open=mobilePanel.classList.toggle('open');
+  mobileBtn.setAttribute('aria-expanded',String(open));
+  mobileBtn.textContent=open?'Close':'Menu';
+});
+mobilePanel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mobilePanel.classList.remove('open');
+  mobileBtn.setAttribute('aria-expanded','false');
+  mobileBtn.textContent='Menu';
+}));
+
+function copyEmail(){
+  const value='BY.RAMAH3@GMAIL.COM';
+  if(navigator.clipboard){navigator.clipboard.writeText(value).catch(()=>{});}
+  const toast=document.getElementById('copyToast');
+  toast.textContent = currentLang === 'ar' ? 'تم نسخ البريد' : 'Email copied';
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'),1800);
+}
+
+const I18N = {"k1": {"en": "UI/UX · Product · Visual Design", "ar": "تصميم واجهات وتجربة مستخدم · تصميم منتجات · تصميم بصري"}, "k2": {"en": "Digital experiences<br>with <em>clarity & character.</em>", "ar": "تجارب رقمية<br>تجمع بين <em>الوضوح والهوية.</em>"}, "k3": {"en": "I design thoughtful digital products and visual experiences that make complex ideas feel intuitive, polished and memorable.", "ar": "أصمم منتجات وتجارب رقمية مدروسة تحوّل الأفكار المعقدة إلى واجهات واضحة، أنيقة، وسهلة التذكر."}, "k4": {"en": "Based in", "ar": "الموقع"}, "k5": {"en": "Jeddah, Saudi Arabia", "ar": "جدة، المملكة العربية السعودية"}, "k6": {"en": "Selected work", "ar": "أعمال مختارة"}, "k7": {"en": "Interactive concept projects", "ar": "مشاريع مفاهيمية تفاعلية"}, "k8": {"en": "Focus", "ar": "التخصص"}, "k9": {"en": "UI/UX · Product · Brand", "ar": "UI/UX · Product · Brand"}, "k10": {"en": "2026 Portfolio", "ar": "ملف أعمال 2026"}, "k11": {"en": "Independent design work", "ar": "أعمال تصميم مستقلة"}, "k12": {"en": "by.ramah blends visual identity with digital product design — from healthcare interfaces to editorial e-commerce experiences.", "ar": "تجمع by.ramah بين الهوية البصرية وتصميم المنتجات الرقمية، من واجهات الرعاية الصحية إلى تجارب التجارة الإلكترونية ذات الطابع التحريري."}, "k13": {"en": "Selected Work", "ar": "أعمال مختارة"}, "k14": {"en": "Built to be <em>used</em>,<br>not just viewed.", "ar": "صُممت لتُستخدم،<br>لا لتُشاهد فقط."}, "k15": {"en": "Two fully interactive concept projects created to demonstrate product thinking, interface craft and visual direction beyond static mockups.", "ar": "مشروعان تفاعليان بالكامل يبرزان التفكير في المنتج، جودة الواجهات، والاتجاه البصري بعيدًا عن النماذج الثابتة."}, "k16": {"en": "Healthcare Product<br>UX/UI · Interaction Design", "ar": "منتج صحي<br>UX/UI · تصميم التفاعل"}, "k17": {"en": "Interactive health product", "ar": "منتج صحي تفاعلي"}, "k18": {"en": "Healthcare without the clutter.", "ar": "رعاية صحية بلا تعقيد."}, "k19": {"en": "Clario Care brings appointments, daily wellness signals, reminders and medical records into one calm experience. The prototype includes a working booking flow that updates the dashboard after confirmation.", "ar": "يجمع Clario Care المواعيد، المؤشرات الصحية اليومية، التذكيرات، والسجل الطبي في تجربة واحدة هادئة وواضحة. ويتضمن النموذج مسار حجز فعليًا يحدّث لوحة التحكم بعد تأكيد الموعد."}, "k20": {"en": "UX strategy", "ar": "استراتيجية UX"}, "k21": {"en": "Healthcare UI", "ar": "واجهات صحية"}, "k22": {"en": "Responsive", "ar": "متجاوب"}, "k23": {"en": "Interactive prototype", "ar": "نموذج تفاعلي"}, "k24": {"en": "Independent concept project · No real patient data or clinical service.", "ar": "مشروع مفاهيمي مستقل · لا يستخدم بيانات مرضى حقيقية ولا يقدم خدمة سريرية."}, "k25": {"en": "Launch interactive demo ↗", "ar": "تشغيل النموذج التفاعلي ↗"}, "k26": {"en": "View case study ↓", "ar": "عرض دراسة الحالة ↓"}, "k27": {"en": "Problem", "ar": "المشكلة"}, "k28": {"en": "Fragmented patient information", "ar": "تشتت معلومات المريض"}, "k29": {"en": "Appointments, results and next steps often live in separate places, increasing uncertainty and cognitive load.", "ar": "غالبًا ما تكون المواعيد والنتائج والخطوات التالية موزعة بين أنظمة متعددة، مما يزيد الارتباك والعبء الذهني."}, "k30": {"en": "Approach", "ar": "المنهج"}, "k31": {"en": "One clear care journey", "ar": "رحلة رعاية واحدة وواضحة"}, "k32": {"en": "The interface prioritizes what matters now, what is next, and which action the patient needs to take.", "ar": "تعطي الواجهة الأولوية لما يهم الآن، وما سيأتي لاحقًا، وما الإجراء المطلوب من المريض."}, "k33": {"en": "Interaction", "ar": "التفاعل"}, "k34": {"en": "Working booking flow", "ar": "مسار حجز يعمل فعليًا"}, "k35": {"en": "Users select a doctor, date and time; confirmation then updates the dashboard in the live prototype.", "ar": "يختار المستخدم الطبيب والتاريخ والوقت، ثم يؤدي التأكيد إلى تحديث لوحة التحكم في النموذج مباشرة."}, "k36": {"en": "Design system", "ar": "نظام التصميم"}, "k37": {"en": "Calm, clinical and trustworthy", "ar": "هادئ، طبي، وجدير بالثقة"}, "k38": {"en": "Soft blue, mint, generous spacing, rounded cards and restrained shadows keep the experience reassuring.", "ar": "أزرق هادئ، أخضر نعناعي، مساحات واسعة، بطاقات مستديرة وظلال خفيفة لخلق تجربة مطمئنة."}, "k39": {"en": "Luxury E-commerce<br>Brand · Web · Interaction", "ar": "تجارة إلكترونية فاخرة<br>هوية · ويب · تفاعل"}, "k40": {"en": "Interactive fashion experience", "ar": "تجربة أزياء تفاعلية"}, "k41": {"en": "Quiet luxury, made digital.", "ar": "فخامة هادئة بصيغة رقمية."}, "k42": {"en": "Atelier Noura is a fictional luxury fashion label with a complete editorial homepage, collection view and interactive product experience including color, size and shopping bag behavior.", "ar": "Atelier Noura علامة أزياء فاخرة تخيلية تتضمن صفحة رئيسية تحريرية، عرضًا للمجموعة، وتجربة منتج تفاعلية تشمل اللون والمقاس وسلة التسوق."}, "k43": {"en": "Art direction", "ar": "إخراج فني"}, "k44": {"en": "Luxury web", "ar": "ويب فاخر"}, "k45": {"en": "E-commerce", "ar": "تجارة إلكترونية"}, "k46": {"en": "Brand system", "ar": "نظام هوية"}, "k47": {"en": "Independent concept project · Checkout is intentionally non-transactional.", "ar": "مشروع مفاهيمي مستقل · عملية الدفع غير مفعلة عمدًا."}, "k48": {"en": "Launch website ↗", "ar": "فتح الموقع ↗"}, "k49": {"en": "Brief", "ar": "الموجز"}, "k50": {"en": "Luxury without visual noise", "ar": "فخامة بلا ضجيج بصري"}, "k51": {"en": "Create a fashion experience that feels premium through restraint, typography and product storytelling.", "ar": "بناء تجربة أزياء فاخرة تعتمد على البساطة، الطباعة الراقية، وسرد قصة المنتج."}, "k52": {"en": "Direction", "ar": "الاتجاه"}, "k53": {"en": "Editorial commerce", "ar": "تجارة بطابع تحريري"}, "k54": {"en": "Large imagery, refined serif typography and warm neutrals make shopping feel closer to reading a fashion editorial.", "ar": "الصور الكبيرة، الخطوط الراقية، والألوان الدافئة تجعل التسوق أقرب إلى تصفح افتتاحية أزياء فاخرة."}, "k55": {"en": "Real shopping behavior", "ar": "تفاعل تسوق حقيقي"}, "k56": {"en": "Product selection, size, color, add-to-bag, quantity adjustment and cart totals all function in the live concept.", "ar": "اختيار المنتج والمقاس واللون، الإضافة إلى السلة، تعديل الكمية، وحساب الإجمالي كلها تعمل داخل النموذج."}, "k57": {"en": "Outcome", "ar": "النتيجة"}, "k58": {"en": "Brand + product thinking", "ar": "تفكير في الهوية والمنتج"}, "k59": {"en": "The project shows visual identity, creative direction and usable e-commerce interface design in one system.", "ar": "يوضح المشروع القدرة على دمج الهوية البصرية، الإخراج الإبداعي، وتصميم واجهات تجارة إلكترونية قابلة للاستخدام ضمن نظام واحد."}, "k60": {"en": "About", "ar": "نبذة"}, "k61": {"en": "A medical mind.<br>A designer’s <em>eye.</em>", "ar": "عقلية طبية.<br>وعين <em>مصممة.</em>"}, "k62": {"en": "I’m Ramah, a multidisciplinary designer", "ar": "أنا رماح، مصممة متعددة التخصصات"}, "k63": {"en": "interested in the intersection of thoughtful products, technology and visual communication. I enjoy taking complex ideas and turning them into experiences that feel clear, useful and beautifully considered.", "ar": "مهتمة بالتقاطع بين المنتجات المدروسة، التقنية، والتواصل البصري. أحب تحويل الأفكار المعقدة إلى تجارب واضحة، مفيدة، ومصممة بعناية."}, "k64": {"en": "UI/UX Design", "ar": "تصميم UI/UX"}, "k65": {"en": "Product Design", "ar": "تصميم المنتجات"}, "k66": {"en": "Visual Identity", "ar": "الهوية البصرية"}, "k67": {"en": "Creative Direction", "ar": "الإخراج الإبداعي"}, "k68": {"en": "Have an idea?<br>Let’s make it <em>real.</em>", "ar": "لديك فكرة؟<br>لنحوّلها إلى <em>واقع.</em>"}, "k69": {"en": "Available for selected freelance projects, collaborations and digital product work. You can find the design account under", "ar": "متاحة لمشاريع مختارة، تعاونات، وأعمال تصميم منتجات رقمية. يمكنك العثور على حساب التصميم باسم"}, "k70": {"en": "Copy @by.ramah3", "ar": "نسخ @by.ramah3"}, "k71": {"en": "Back to top ↑", "ar": "العودة للأعلى ↑"}, "k72": {"en": "© 2026 by.ramah · Independent portfolio", "ar": "© 2026 by.ramah · ملف أعمال مستقل"}, "k73": {"en": "Designed & built as an interactive portfolio experience", "ar": "صُمم وطُوّر كتجربة Portfolio تفاعلية"}, "k74": {"en": "Work", "ar": "الأعمال"}, "k75": {"en": "Contact", "ar": "التواصل"}, "k76": {"en": "View projects ↘", "ar": "عرض المشاريع ↘"}};
+let currentLang = localStorage.getItem('byramah_lang') || 'ar';
+
+function applyLanguage(lang){
+  currentLang = lang;
+  localStorage.setItem('byramah_lang', lang);
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.dataset.i18n;
+    if(I18N[key]) el.textContent=I18N[key][lang];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const key=el.dataset.i18nHtml;
+    if(I18N[key]) el.innerHTML=I18N[key][lang];
+  });
+
+  const label = lang === 'ar' ? 'EN' : 'AR';
+  const a=document.getElementById('langSwitch');
+  const b=document.getElementById('mobileLangSwitch');
+  if(a) a.textContent=label;
+  if(b) b.textContent=label;
+  document.title = lang === 'ar' ? 'by.ramah — مصممة UI/UX ومنتجات رقمية' : 'by.ramah — UI/UX & Product Designer';
+  const arContact=document.querySelector('[data-contact-copy-ar]');
+  const enContact=document.querySelector('[data-contact-copy-en]');
+  if(arContact && enContact){
+    arContact.style.display = lang === 'ar' ? '' : 'none';
+    enContact.style.display = lang === 'en' ? '' : 'none';
+  }
+}
+
+document.getElementById('langSwitch')?.addEventListener('click',()=>applyLanguage(currentLang==='ar'?'en':'ar'));
+document.getElementById('mobileLangSwitch')?.addEventListener('click',()=>applyLanguage(currentLang==='ar'?'en':'ar'));
+applyLanguage(currentLang);
+
+</script>
+</body>
+</html>
